@@ -25,17 +25,9 @@ def nonSpark_airline():
     print('airline dataset')
     start = time.time() * 1000
     x = pd.read_csv('resources/airline/train.csv')
-    x = x.replace('Male', 0.0)
-    x = x.replace('Female', 1.0)
-    x = x.replace('Loyal Customer', 1.0)
-    x = x.replace('disloyal Customer', 0.0)
-    x = x.replace('Business travel', 1.0)
-    x = x.replace('Personal Travel', 0.0)
-    x = x.replace('Eco', 0.0)
-    x = x.replace('Eco Plus', 1.0)
-    x = x.replace('Business', 2.0)
-    x = x.replace('neutral or dissatisfied', 0.0)
-    x = x.replace('satisfied', 1.0)
+    cols_to_encode = ['Gender', 'Customer Type', 'Type of Travel', 'Class', 'satisfaction']
+    for val in cols_to_encode:
+        x[val] = x.groupby(val).ngroup()
     y = x.iloc[:, -1:]
     x = x.iloc[:, :-1]
     x = x.fillna(0)
