@@ -4,6 +4,7 @@ from sklearn.naive_bayes import GaussianNB
 import pandas as pd
 import time
 import numpy as np
+
 def nonSpark_heart():
     print("heart dataset")
     start = time.time() * 1000
