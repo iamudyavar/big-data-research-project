@@ -5,7 +5,7 @@
 - Heart Disease (statlog_heart.csv): https://figshare.com/ndownloader/files/34179327
 - Airline Customer Satisfaction (airline.csv): https://www.kaggle.com/datasets/sjleshrac/airlines-customer-satisfaction/download?datasetVersionNumber=1
 - Credit Card Fraud (fraudTrain.csv): https://www.kaggle.com/datasets/kartik2112/fraud-detection/download?datasetVersionNumber=1
-- Particle Classification (SUSY.csv): https://www.kaggle.com/datasets/kartik2112/fraud-detection/download?datasetVersionNumber=1
+- Particle Classification (SUSY.csv): https://www.kaggle.com/datasets/janus137/supersymmetry-dataset
 
 ## How to run scikit-learn script
 
