@@ -8,10 +8,9 @@ import numpy as np
 def nonSpark_heart():
     print("heart dataset")
     start = time.time() * 1000
-    x = np.loadtxt('resources/heart/heart.dat')
-    x = pd.DataFrame(x)
+    x = pd.read_csv('resources/heart/statlog_heart.csv')
     y = x.iloc[:, -1:]
-    x = x.iloc[:, :-1]
+    x = x.iloc[:, 1:-1]
     xtrain, xtest, ytrain, ytest = train_test_split(x, y.values.ravel(), test_size=.3)
     gnb = GaussianNB()
     y_pred = gnb.fit(xtrain, ytrain).predict(xtest)
